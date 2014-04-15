@@ -20,51 +20,57 @@ public class EsFechaCorrectaBisiestos {
         System.out.println("Ingrese el año en forma numerica");
         int year = scanner.nextInt();
 
-        final String ERROR = "fecha inconsistente";
-        final String SUCCESS = "fecha consistente";
-
-        switch (month) {
-            case 1: case 3: case 5:
-            case 7: case 8: case 10:
-            case 12:
-                if (day > 31) {
-                    System.out.println(ERROR);
-                    break;
-                }
-
-            case 4: case 6:
-            case 9: case 11:
-                if (day > 30) {
-                    System.out.println(ERROR);
-                    break;
-                }
-
-            case 2:
-                if (esBisiesto(year) && day <= 29) {
-                    System.out.println(SUCCESS);
-                    break;
-                }
-                if (day > 28) {
-                    System.out.println(ERROR);
-                    break;
-                }
-
-            default:
-                if (month > 12) {
-                    System.out.println(ERROR);
-                    break;
-                }
-
-                if (year < 1) {
-                    System.out.println(ERROR);
-                    break;
-                }
-
-                System.out.println(SUCCESS);
+        if (isValid(day, month, year)) {
+            System.out.println("fecha consistente");
+        } else {
+            System.out.println("fecha inconsistente");
         }
     }
 
     private static boolean esBisiesto(int year) {
         return ((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0);
+    }
+
+    public static boolean isValid(int day, int month, int year) {
+
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                if (day > 31) {
+                    return false;
+                }
+
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                if (day > 30) {
+                    return false;
+                }
+
+            case 2:
+                if (esBisiesto(year) && day <= 29) {
+                    return true;
+                }
+                if (day > 28) {
+                    return false;
+                }
+
+            default:
+                if (month > 12) {
+                    return false;
+                }
+
+                if (year < 1) {
+                    return false;
+                }
+
+                return true;
+        }
     }
 }
