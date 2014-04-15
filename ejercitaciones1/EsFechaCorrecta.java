@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 /**
  * Generar un programa que en su inicio cuenta con 3 variables numéricas para día, mes y año
-   Realizar un algoritmo que permita determinar si la fecha es consistente
-   Por definición, Febrero tiene 28 días.
-   Utilizar SWITCH e IF
+ * Realizar un algoritmo que permita determinar si la fecha es consistente
+ * Por definición, Febrero tiene 28 días.
+ * Utilizar SWITCH e IF
  */
 public class EsFechaCorrecta {
     public static void main(String[] args) {
