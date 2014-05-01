@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Frase/Frase.iml" filepath="$PROJECT_DIR$/Frase/Frase.iml" />
       <module fileurl="file://$PROJECT_DIR$/calculadora/calculadora.iml" filepath="$PROJECT_DIR$/calculadora/calculadora.iml" />
       <module fileurl="file://$PROJECT_DIR$/contador/contador.iml" filepath="$PROJECT_DIR$/contador/contador.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frase/frase.iml" filepath="$PROJECT_DIR$/frase/frase.iml" />
       <module fileurl="file://$PROJECT_DIR$/usal_prog2.iml" filepath="$PROJECT_DIR$/usal_prog2.iml" />
     </modules>
   </component>
