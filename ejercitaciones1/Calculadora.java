@@ -87,7 +87,9 @@ public class Calculadora {
             System.out.println("Error. Numero no valido");
             scanner.nextLine();
         }
-
+/*nexInt() te devuelve el siguiente entero, 
+hasNextInt() te devuelve un booleano diciendote si existe un siguiente entero, 
+te devolverá True si existe, de lo contrario te devolverá False.*/
         return scanner.nextDouble();
     }
 }
